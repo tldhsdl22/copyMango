@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="copyMango" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VWH-hS-rnN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="450"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.24347174657534237" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="450" id="bpH-30-Qpb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="응답하라 경기북부" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iv5-zd-Aso">
+                                <rect key="frame" x="135.5" y="75" width="104" height="72"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="textColor" red="0.9624429162" green="0.99177280469999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWc-VJ-37g">
+                                <rect key="frame" x="72" y="480" width="230" height="55"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="48u-KL-OEk"/>
+                                    <constraint firstAttribute="height" constant="55" id="wUV-cy-TZg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
+                                <state key="normal" title="페이스북 계정으로 이용하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PNp-YQ-K5k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZ5-F7-BGR">
+                                <rect key="frame" x="72" y="555" width="230" height="55"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="7Zl-yq-pjM"/>
+                                    <constraint firstAttribute="width" constant="230" id="UxQ-OS-rJh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
+                                <state key="normal" title="카카오톡 계정으로 이용하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibW-9a-4fg">
+                                <rect key="frame" x="16" y="627" width="108" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="이메일로 이용하기">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrB-89-VbS">
+                                <rect key="frame" x="264" y="627" width="95" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="로그인 건너뛰기">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VWH-hS-rnN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="A6E-08-LUy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lrB-89-VbS" secondAttribute="bottom" constant="10" id="Efx-ke-Pkh"/>
+                            <constraint firstItem="MZ5-F7-BGR" firstAttribute="top" secondItem="tWc-VJ-37g" secondAttribute="bottom" constant="20" id="H5f-ap-xPw"/>
+                            <constraint firstItem="tWc-VJ-37g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SFv-6I-Dzc"/>
+                            <constraint firstItem="lrB-89-VbS" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="cs1-jo-ovC"/>
+                            <constraint firstItem="iv5-zd-Aso" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gI3-Ho-kih"/>
+                            <constraint firstAttribute="trailing" secondItem="VWH-hS-rnN" secondAttribute="trailing" id="hVe-W4-QZ6"/>
+                            <constraint firstItem="tWc-VJ-37g" firstAttribute="top" secondItem="VWH-hS-rnN" secondAttribute="bottom" constant="30" id="kFx-mm-Jff"/>
+                            <constraint firstItem="MZ5-F7-BGR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kp2-kB-Dt4"/>
+                            <constraint firstItem="iv5-zd-Aso" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="qmf-dP-nfK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ibW-9a-4fg" secondAttribute="bottom" constant="10" id="r12-OV-w8A"/>
+                            <constraint firstItem="VWH-hS-rnN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xUa-AR-dRe"/>
+                            <constraint firstItem="ibW-9a-4fg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ywH-2S-XYJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blindLabel" destination="iv5-zd-Aso" id="4vK-7D-k29"/>
+                        <outlet property="blindView" destination="VWH-hS-rnN" id="LLe-1j-fWY"/>
+                        <outlet property="blindViewHeight" destination="bpH-30-Qpb" id="vO5-9p-gEM"/>
+                        <outlet property="btnFacebook" destination="tWc-VJ-37g" id="TuJ-Dd-7SF"/>
+                        <outlet property="btnKaKao" destination="MZ5-F7-BGR" id="Tdp-s9-mjY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Content View Controller-->
+        <scene sceneID="61z-VT-tCX">
+            <objects>
+                <viewController storyboardIdentifier="ContentViewController" id="HTR-II-6Nm" customClass="ContentViewController" customModule="copyMango" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gK6-sO-pTT"/>
+                        <viewControllerLayoutGuide type="bottom" id="oBX-ec-BOJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lk3-kV-rsi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="085-3K-PCf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="085-3K-PCf" firstAttribute="top" secondItem="lk3-kV-rsi" secondAttribute="top" id="BM2-A3-re0"/>
+                            <constraint firstItem="oBX-ec-BOJ" firstAttribute="top" secondItem="085-3K-PCf" secondAttribute="bottom" id="hde-2I-veo"/>
+                            <constraint firstAttribute="trailing" secondItem="085-3K-PCf" secondAttribute="trailing" id="kWI-vO-iHg"/>
+                            <constraint firstItem="085-3K-PCf" firstAttribute="leading" secondItem="lk3-kV-rsi" secondAttribute="leading" id="zEs-OX-Fbt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="085-3K-PCf" id="H9s-3u-Fcy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ecq-rT-g3k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33" y="-630"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="Vqj-Mn-mBa">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="evj-4W-OLh" customClass="PageViewController" customModule="copyMango" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="idJ-Mm-qdr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-634" y="-630"/>
+        </scene>
+    </scenes>
+</document>
