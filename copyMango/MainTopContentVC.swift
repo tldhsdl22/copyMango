@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainTopContetnVC: UIViewController {
+class MainTopContentVC: UIViewController {
     @IBOutlet var labelCommend: UILabel!
     @IBOutlet var labelSummary: UILabel!
     @IBOutlet var imageView: UIImageView!
@@ -18,7 +18,8 @@ class MainTopContetnVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        labelCommend.layer.cornerRadius = 18.0
+        labelCommend.layer.masksToBounds = true
+        labelCommend.layer.cornerRadius = 15.0
         labelSummary.text = summary
         imageView.image = UIImage(named: imageName)
         

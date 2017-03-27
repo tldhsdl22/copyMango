@@ -15,10 +15,13 @@
 		3E0662B11E8397CC001697A9 /* copyMangoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0662B01E8397CC001697A9 /* copyMangoTests.swift */; };
 		3E0662BC1E839862001697A9 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0662BB1E839862001697A9 /* ContentViewController.swift */; };
 		3E0662BE1E839C15001697A9 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0662BD1E839C15001697A9 /* PageViewController.swift */; };
-		3E2849731E84F97F001A693E /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2849721E84F97F001A693E /* MainCollectionViewCell.swift */; };
+		3E2849731E84F97F001A693E /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2849721E84F97F001A693E /* MainCell.swift */; };
+		3E45B2B41E85191F004A6DDB /* TopImgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E45B2B31E85191F004A6DDB /* TopImgCell.swift */; };
+		3E45B2B61E851B99004A6DDB /* BetweenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E45B2B51E851B99004A6DDB /* BetweenCell.swift */; };
+		3E5FBCBB1E87BB2500898590 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5FBCBA1E87BB2500898590 /* CollectionViewController.swift */; };
 		3E6B7B371E83BC57001E1F8F /* MainPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6B7B361E83BC57001E1F8F /* MainPage.storyboard */; };
 		3E6B7B391E83BD49001E1F8F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B7B381E83BD49001E1F8F /* MainViewController.swift */; };
-		3E6B7B3B1E83CA6C001E1F8F /* MainTopContetnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B7B3A1E83CA6C001E1F8F /* MainTopContetnVC.swift */; };
+		3E6B7B3B1E83CA6C001E1F8F /* MainTopContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B7B3A1E83CA6C001E1F8F /* MainTopContentVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,10 +47,13 @@
 		3E0662B21E8397CC001697A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E0662BB1E839862001697A9 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		3E0662BD1E839C15001697A9 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
-		3E2849721E84F97F001A693E /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		3E2849721E84F97F001A693E /* MainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		3E45B2B31E85191F004A6DDB /* TopImgCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopImgCell.swift; sourceTree = "<group>"; };
+		3E45B2B51E851B99004A6DDB /* BetweenCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetweenCell.swift; sourceTree = "<group>"; };
+		3E5FBCBA1E87BB2500898590 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		3E6B7B361E83BC57001E1F8F /* MainPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainPage.storyboard; sourceTree = "<group>"; };
 		3E6B7B381E83BD49001E1F8F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		3E6B7B3A1E83CA6C001E1F8F /* MainTopContetnVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTopContetnVC.swift; sourceTree = "<group>"; };
+		3E6B7B3A1E83CA6C001E1F8F /* MainTopContentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTopContentVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +130,11 @@
 			children = (
 				3E6B7B361E83BC57001E1F8F /* MainPage.storyboard */,
 				3E6B7B381E83BD49001E1F8F /* MainViewController.swift */,
-				3E6B7B3A1E83CA6C001E1F8F /* MainTopContetnVC.swift */,
-				3E2849721E84F97F001A693E /* MainCollectionViewCell.swift */,
+				3E6B7B3A1E83CA6C001E1F8F /* MainTopContentVC.swift */,
+				3E5FBCBA1E87BB2500898590 /* CollectionViewController.swift */,
+				3E2849721E84F97F001A693E /* MainCell.swift */,
+				3E45B2B31E85191F004A6DDB /* TopImgCell.swift */,
+				3E45B2B51E851B99004A6DDB /* BetweenCell.swift */,
 			);
 			name = MainPage;
 			sourceTree = "<group>";
@@ -234,11 +243,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E2849731E84F97F001A693E /* MainCollectionViewCell.swift in Sources */,
+				3E45B2B41E85191F004A6DDB /* TopImgCell.swift in Sources */,
+				3E2849731E84F97F001A693E /* MainCell.swift in Sources */,
 				3E0662BE1E839C15001697A9 /* PageViewController.swift in Sources */,
 				3E6B7B391E83BD49001E1F8F /* MainViewController.swift in Sources */,
+				3E5FBCBB1E87BB2500898590 /* CollectionViewController.swift in Sources */,
+				3E45B2B61E851B99004A6DDB /* BetweenCell.swift in Sources */,
 				3E06629E1E8397CC001697A9 /* ViewController.swift in Sources */,
-				3E6B7B3B1E83CA6C001E1F8F /* MainTopContetnVC.swift in Sources */,
+				3E6B7B3B1E83CA6C001E1F8F /* MainTopContentVC.swift in Sources */,
 				3E0662BC1E839862001697A9 /* ContentViewController.swift in Sources */,
 				3E06629C1E8397CC001697A9 /* AppDelegate.swift in Sources */,
 			);
@@ -383,6 +395,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = song.copyMango;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos10.2;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -395,6 +408,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = song.copyMango;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos10.2;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
