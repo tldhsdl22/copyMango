@@ -7,23 +7,36 @@
 //
 
 import UIKit
+import GuillotineMenu
 
 class MainViewController: UIViewController {
+    fileprivate lazy var presentationAnimator = GuillotineTransitionAnimation()
+    
     @IBOutlet var viewFrame: UIView!
-    var pageImages : NSArray!
+    @IBOutlet fileprivate var barButton: UIButton!
+
+
     var collectionVC : CollectionViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 1. tableview를 셋팅한다.
-        // 2-1. TopImgCell을 만든다.
-        // 2-2. Cell안에 CollectionView를 만든다.(Controller도 포함)
-        // 3. BetweenCell을 만든다.
-        // 4. ContentsCell을 만든다.
-        print("mainview")
-        self.pageImages = NSArray(objects: "exp1","exp2","exp3")
+        self.title = "Title"
+        let navBar = self.navigationController!.navigationBar
+        navBar.barTintColor = UIColor.orange
+        navBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
         initCollection()
+    }
+    
+    @IBAction func showMenuAction(_ sender: UIButton) {
+        let menuViewController = self.storyboard!.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
+        menuViewController.modalPresentationStyle = .custom
+        menuViewController.transitioningDelegate = self
+        
+        presentationAnimator.animationDelegate = menuViewController as? GuillotineAnimationDelegate
+        presentationAnimator.supportView = navigationController!.navigationBar
+        presentationAnimator.presentButton = sender
+        self.present(menuViewController, animated: true, completion: nil)
     }
     
     func initCollection(){
@@ -42,11 +55,18 @@ class MainViewController: UIViewController {
             self.collectionVC.view.leadingAnchor.constraint(equalTo: viewFrame.leadingAnchor),
             self.collectionVC.view.trailingAnchor.constraint(equalTo: viewFrame.trailingAnchor),
             self.collectionVC.view.bottomAnchor.constraint(equalTo: viewFrame.bottomAnchor)])
+    }
+}
 
-        
-        let con = UIPageControl.appearance()
-        con.currentPageIndicatorTintColor = UIColor.orange
-        con.pageIndicatorTintColor = UIColor.white
-
+extension MainViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        presentationAnimator.mode = .presentation
+        return presentationAnimator
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        presentationAnimator.mode = .dismissal
+        return presentationAnimator
     }
 }

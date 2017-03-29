@@ -7,21 +7,67 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import SDWebImage
 
-class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UIPageViewControllerDataSource {
+class CollectionViewController: UICollectionViewController,UICollectionViewDelegateFlowLayout, UIPageViewControllerDataSource {
     
     var pageSummary : NSArray!
     var pageImgName : NSArray!
     var mainPageViewController : UIPageViewController!
+    
+    var mainTitle = [String]()
+    var mainImgName  = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.red
         
-        self.pageImgName = NSArray(objects: "exp2", "exp3")
-        self.pageSummary = NSArray(objects: "에디터추천\n3월의 신상 카페", "이런 떡볶이 먹어봤어?\n3월의 신상 카페")
+        initData()
+        self.collectionView?.dataSource = self
+        print("next Schedule")
     }
     
+    /**
+     * 데이터 초기화 함수
+     */
+    func initData() {
+        
+        self.mainTitle = []
+        self.mainImgName = []
+        self.pageImgName = NSArray(objects: "exp2", "exp3")
+        self.pageSummary = NSArray(objects: "에디터추천\n3월의 신상 카페", "이런 떡볶이 먹어봤어?\n오늘은 떡튀순으로 가자!")
+        
+        let param = ["type":10,"location":200,"sort":101,"kind":300,"pageNum":1]
+        var count = 1;
+        
+        Alamofire.request("http://iloveggbb.com/app/main/mainList.php", method: .post, parameters: param).responseJSON { response in
+            if let results = response.result.value {
+                for result in results as! NSArray{
+                    let json = JSON(result)
+                    let data = json["open"]
+                    let name = json["name"]
+                    let thumbnail = json["thumbnail"]
+                    
+                    self.mainTitle.append(name.stringValue)
+                    self.mainImgName.append(thumbnail.stringValue)
+                    
+                    print("nofilter_\(data)")
+                    print("stringValue_\(data.stringValue)")
+                    print("string_\(data.string)")
+                    print("\(count)번째 \(result)")
+                    print("count\(self.mainTitle.count)")
+                    //self.items.append(result)
+                    count = count+1
+                }
+            }
+            self.collectionView!.reloadData()
+        }
+    }
+    
+    /**
+     * pageView를 초기화 해주는 함수
+     */
     func initPageView(cell:UICollectionViewCell){
         self.mainPageViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainPageVC") as? PageViewController
         
@@ -35,7 +81,6 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         
         self.addChildViewController(self.mainPageViewController)
         cell.addSubview(self.mainPageViewController.view)
-        
         
         let pageController = UIPageControl.appearance()
         pageController.pageIndicatorTintColor = UIColor.white
@@ -123,7 +168,8 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 30
+        print("count_ \(mainImgName.count)")
+        return mainImgName.count + 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -136,23 +182,32 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         }
         else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCell", for: indexPath) as! MainCell
-            cell.labelTitle.text = "Title"
+            let index = indexPath.row - 1
+            cell.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1)
+            cell.labelTitle.text = self.mainTitle[index]
+            cell.imageView.image = UIImage(named: self.mainImgName[index])
+            cell.imageView.sd_setImage(with: URL(string:    self.mainImgName[index]), placeholderImage: UIImage(named:"exp1"))
             
-            cell.backgroundColor = UIColor.green
+            cell.imageView.frame = CGRect(x: 0, y: 0, width: Int(cell.frame.width), height: Int(cell.frame.height/3 * 2))
             
+            cell.labelTitle.frame = CGRect(x:0, y: Int(cell.imageView.frame.height), width:Int(cell.frame.width), height: 30)
+
             return cell
         }
     }
     
+    /**
+     *  각 cell의 사이즈를 변경해주는 함수
+     */
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let row = indexPath.row
         
         if row == 0 {
-            let sizes = CGSize(width: self.view.frame.width - 16, height: self.view.frame.width / 2 - 16)
+            let sizes = CGSize(width: self.view.frame.width - 16, height: self.view.frame.width / 2)
             return sizes
         }
         else {
-            let sizes = CGSize(width: view.frame.width / 2 - 12, height: view.frame.width / 2 - 16)
+            let sizes = CGSize(width: view.frame.width / 2 - 12, height: (view.frame.width / 2 - 12) * 4/3)
             return sizes
         }
     }

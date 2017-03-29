@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "copyMango/CollectionViewController.swift"
-            timestampString = "512290688.970282"
+            timestampString = "512360689.517324"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "initPageView(cell:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "copyMango/CollectionViewController.swift"
-            timestampString = "512290688.970282"
+            timestampString = "512360689.517324"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "initPageView(cell:)"
             landmarkType = "7">
          </BreakpointContent>

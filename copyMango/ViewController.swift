@@ -141,7 +141,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
     @IBAction func loginFacebook(_ sender: Any) {
         let storyboards:UIStoryboard = UIStoryboard(name: "MainPage", bundle: nil)
         
-        guard let destVC = storyboards.instantiateViewController(withIdentifier: "MainViewController") as? MainViewController else {
+        guard let destVC = storyboards.instantiateViewController(withIdentifier: "MainPageNavigationController") as? UINavigationController else {
             return
         }
         

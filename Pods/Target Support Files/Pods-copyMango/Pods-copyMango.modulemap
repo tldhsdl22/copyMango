@@ -1,0 +1,6 @@
+framework module Pods_copyMango {
+  umbrella header "Pods-copyMango-umbrella.h"
+
+  export *
+  module * { export * }
+}

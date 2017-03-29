@@ -15,6 +15,7 @@
 		3E0662B11E8397CC001697A9 /* copyMangoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0662B01E8397CC001697A9 /* copyMangoTests.swift */; };
 		3E0662BC1E839862001697A9 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0662BB1E839862001697A9 /* ContentViewController.swift */; };
 		3E0662BE1E839C15001697A9 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0662BD1E839C15001697A9 /* PageViewController.swift */; };
+		3E0943E21E8A9719003B8C8D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0943E11E8A9719003B8C8D /* MenuViewController.swift */; };
 		3E2849731E84F97F001A693E /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2849721E84F97F001A693E /* MainCell.swift */; };
 		3E45B2B41E85191F004A6DDB /* TopImgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E45B2B31E85191F004A6DDB /* TopImgCell.swift */; };
 		3E45B2B61E851B99004A6DDB /* BetweenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E45B2B51E851B99004A6DDB /* BetweenCell.swift */; };
@@ -22,6 +23,7 @@
 		3E6B7B371E83BC57001E1F8F /* MainPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6B7B361E83BC57001E1F8F /* MainPage.storyboard */; };
 		3E6B7B391E83BD49001E1F8F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B7B381E83BD49001E1F8F /* MainViewController.swift */; };
 		3E6B7B3B1E83CA6C001E1F8F /* MainTopContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B7B3A1E83CA6C001E1F8F /* MainTopContentVC.swift */; };
+		4EA846A49CE70310A56A27AE /* Pods_copyMango.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 980EFF5CA19E2B4EFABAAD12 /* Pods_copyMango.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,7 @@
 		3E0662B21E8397CC001697A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E0662BB1E839862001697A9 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		3E0662BD1E839C15001697A9 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		3E0943E11E8A9719003B8C8D /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3E2849721E84F97F001A693E /* MainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		3E45B2B31E85191F004A6DDB /* TopImgCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopImgCell.swift; sourceTree = "<group>"; };
 		3E45B2B51E851B99004A6DDB /* BetweenCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetweenCell.swift; sourceTree = "<group>"; };
@@ -54,6 +57,10 @@
 		3E6B7B361E83BC57001E1F8F /* MainPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainPage.storyboard; sourceTree = "<group>"; };
 		3E6B7B381E83BD49001E1F8F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3E6B7B3A1E83CA6C001E1F8F /* MainTopContentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTopContentVC.swift; sourceTree = "<group>"; };
+		75142652F27235DB67A0BE05 /* Pods_copyMangoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_copyMangoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		980EFF5CA19E2B4EFABAAD12 /* Pods_copyMango.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_copyMango.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98B07858600BBD40E9C2C580 /* Pods-copyMango.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-copyMango.release.xcconfig"; path = "Pods/Target Support Files/Pods-copyMango/Pods-copyMango.release.xcconfig"; sourceTree = "<group>"; };
+		C3E6C13EF89ED145F5ADE630 /* Pods-copyMango.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-copyMango.debug.xcconfig"; path = "Pods/Target Support Files/Pods-copyMango/Pods-copyMango.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EA846A49CE70310A56A27AE /* Pods_copyMango.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +88,8 @@
 				3E06629A1E8397CC001697A9 /* copyMango */,
 				3E0662AF1E8397CC001697A9 /* copyMangoTests */,
 				3E0662991E8397CC001697A9 /* Products */,
+				EC8156AEE925A15D13EA2F1F /* Pods */,
+				9739F2089A2FE9B9C9469D9D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,8 +145,27 @@
 				3E2849721E84F97F001A693E /* MainCell.swift */,
 				3E45B2B31E85191F004A6DDB /* TopImgCell.swift */,
 				3E45B2B51E851B99004A6DDB /* BetweenCell.swift */,
+				3E0943E11E8A9719003B8C8D /* MenuViewController.swift */,
 			);
 			name = MainPage;
+			sourceTree = "<group>";
+		};
+		9739F2089A2FE9B9C9469D9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				980EFF5CA19E2B4EFABAAD12 /* Pods_copyMango.framework */,
+				75142652F27235DB67A0BE05 /* Pods_copyMangoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC8156AEE925A15D13EA2F1F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3E6C13EF89ED145F5ADE630 /* Pods-copyMango.debug.xcconfig */,
+				98B07858600BBD40E9C2C580 /* Pods-copyMango.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E0662B51E8397CC001697A9 /* Build configuration list for PBXNativeTarget "copyMango" */;
 			buildPhases = (
+				E88B4A3F2B0947D5A9D16922 /* [CP] Check Pods Manifest.lock */,
 				3E0662941E8397CC001697A9 /* Sources */,
 				3E0662951E8397CC001697A9 /* Frameworks */,
 				3E0662961E8397CC001697A9 /* Resources */,
+				E388D216E0CE852F55F92079 /* [CP] Embed Pods Frameworks */,
+				3A4CD79CC3558D1690C5DB91 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,6 +270,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3A4CD79CC3558D1690C5DB91 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-copyMango/Pods-copyMango-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E388D216E0CE852F55F92079 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-copyMango/Pods-copyMango-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E88B4A3F2B0947D5A9D16922 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3E0662941E8397CC001697A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -247,6 +327,7 @@
 				3E2849731E84F97F001A693E /* MainCell.swift in Sources */,
 				3E0662BE1E839C15001697A9 /* PageViewController.swift in Sources */,
 				3E6B7B391E83BD49001E1F8F /* MainViewController.swift in Sources */,
+				3E0943E21E8A9719003B8C8D /* MenuViewController.swift in Sources */,
 				3E5FBCBB1E87BB2500898590 /* CollectionViewController.swift in Sources */,
 				3E45B2B61E851B99004A6DDB /* BetweenCell.swift in Sources */,
 				3E06629E1E8397CC001697A9 /* ViewController.swift in Sources */,
@@ -389,6 +470,7 @@
 		};
 		3E0662B61E8397CC001697A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3E6C13EF89ED145F5ADE630 /* Pods-copyMango.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = copyMango/Info.plist;
@@ -402,6 +484,7 @@
 		};
 		3E0662B71E8397CC001697A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98B07858600BBD40E9C2C580 /* Pods-copyMango.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = copyMango/Info.plist;
